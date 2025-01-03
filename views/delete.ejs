@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter username and email</title>
+</head>
+
+<body>
+    <h2>User is : <%= result[0].username %>
+    </h2>
+    <form method="post" action="/user/<%= result[0].id %>?_method=delete">
+        <label for="email">Enter email : </label>
+        <input type="email" placeholder="Enter email" name="email"><br><br>
+        <label for="password">Enter password : </label>
+        <input type="password" placeholder="Enter password" name="password"><br><br>
+        <button>Delete</button>
+    </form>
+</body>
+
+</html>
